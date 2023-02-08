@@ -84,18 +84,30 @@ body{
 }
 
 .card-highlihts{
+    flex-grow: 1;
     max-width: 280px;    
     min-width: 200px;
     @include card-style(205deg, #3175c6, #262834);
 }
 
+/******************** MEDIA QUERY DESKTOP ACIMA *****************
+*****************************************************************/
+
 @media screen and (min-width: 640px){
+    .main-content{
+        align-items: start;
+    }
+
     .card-default{
         max-width: 280px;
         min-width: 200px;
         padding-inline: 60px;
         margin: 10px;
         text-align: center;
+    }
+    .card-highlihts{
+        // padding-inline: 60px;
+        margin: 10px;
     }
 
     .card-default .card-body{        
@@ -108,5 +120,12 @@ body{
 
     .card-default .card-body .card-icon{
         margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .card-default .card-body .card-title{
+        max-width: 100px;
+        white-space: nowrap;
+        font-size: clamp(16px, 1.8vw, 20px);
     }
 }

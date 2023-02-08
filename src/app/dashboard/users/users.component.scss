@@ -1,9 +1,27 @@
-html, body{
-    padding: 0;
-    margin: 0;
+/************************* FONTS *****************************
+**************************************************************/
+$font-segundaria: 'Noto Sans JP', sans-serif;
+
+/************************* CORES *****************************
+**************************************************************/
+
+$bg-ligth: #fff;
+$cor-ligth: #8284e3;
+$cor-danger: #c40606;
+$cor-boder: #800080;
+$cor-font: #64646c;
+$bg-hover: #485264;
+$bg-dark: #212429;
+
+/************************* MIXINS *****************************
+**************************************************************/
+*, ::after, ::before {
     box-sizing: border-box;
 }
-*, ::after, ::before {
+html, 
+body{
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 ul{
@@ -15,32 +33,29 @@ a{
     text-decoration: none;
     color: unset;
 }
-/************************* CORES *****************************
-**************************************************************/
-$bg-dark: #212429;
-$bg-ligth: #fff;
-$bg-hover: #485264;
-$padrao-fonte: #7d7d83;
-$color-highligths: #8284e3;
-$preto: #000;
-$vermelho: rgb(196, 6, 6);
+
 /************************* MIXINS *****************************
 **************************************************************/
+
 .main_content{
     display: flex;
     flex-direction: column;
     background: darken($bg-dark, 2%);
     font-family: 'Roboto';
     height: 100vh;
-    color: $padrao-fonte;
+    color: $cor-font;
     padding: 20px;
 }
+
 .heading-inline{
     background: darken($bg-dark, 3%);
-    border: 2px dashed lighten($bg-dark, 2%);;
     color: $bg-ligth;
+    border: 2px dashed lighten($bg-dark, 2%);
     padding: 20px 40px;
     margin-block: 30px;
+    font-family: $font-segundaria;
+    font-size: clamp(17px, 3vw, 22px);
+    font-weight: 300;
 }
 .heading-control-users{
     display: flex;
@@ -66,13 +81,13 @@ $vermelho: rgb(196, 6, 6);
     font-size: 14px;
     background: none;
     border: none;
-    border: 1px solid darken($padrao-fonte, 20%);
-    color: lighten($padrao-fonte, 50%);
+    border: 1px solid darken($cor-font, 20%);
+    color: lighten($cor-font, 50%);
     &:focus{
        outline: none;
     }
     &::placeholder{
-        color: lighten($padrao-fonte, 50%);
+        color: lighten($cor-font, 50%);
     }
 }
 .serch-users input[type="button"]{
@@ -97,8 +112,8 @@ $vermelho: rgb(196, 6, 6);
     cursor: pointer;
     background: none;
     background: lighten($bg-dark, 7%);
-    border: 1px solid darken($padrao-fonte, 20%);
-    color: $padrao-fonte;
+    border: 1px solid darken($cor-font, 20%);
+    color: $cor-font;
     background-image: url("data:image/svg+xml;utf8,<svg fill='black' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
     background-repeat: no-repeat;
     background-position-x: 100%;
@@ -121,11 +136,14 @@ table{
     width: 100%;
     display: table;
     border-collapse: collapse;
-    border: 1px solid darken($padrao-fonte, 20%);
+    border: 1px solid darken($cor-font, 20%);
+}
+table .regular-col{
+    display: none;
 }
 table thead{
     font-size: 14px;
-    border-bottom: 1px solid darken($padrao-fonte, 20%);
+    border-bottom: 1px solid darken($cor-font, 20%);
 }
 table tbody{
     display: table-row-group;
@@ -169,5 +187,11 @@ table tr:hover .row-actions{
     font-size: 13px;
 }
 .row-actions .delete a{
-    color: $vermelho;
+    color: $cor-danger;
+}
+
+@media screen and (min-width: 640px){
+    table .regular-col{
+        display: table-cell;
+    }
 }
