@@ -1,0 +1,142 @@
+<div class="main-content">
+    <h3 class="heading-inline">Configurações gerais</h3>
+    <div class="content-form">
+        <form>
+            <div class="mb-4 row">
+                <label for="inputTitleSite" class="col-3 col-form-label">Título do site:</label>
+                <div class="col-3 col-md-6">
+                    <input type="text" class="form-control" name="inputTitleSite" placeholder="Título do site">
+                </div>
+            </div>
+
+            <div class="mb-4 row">
+                <label for="inputDescSite" class="col-3 col-form-label">Descrição:</label>
+                <div class="col-5 col-md-8">
+                    <input type="text" class="form-control" name="inputDescSite" placeholder="Descrição do site"
+                        aria-describedby="descHelp">
+                    <div id="descHelp" class="form-text">Em poucas palavras, explique sobre o que é esse site.</div>
+                </div>
+            </div>
+
+            <div class="mb-4 row">
+                <label for="inputUrl" class="col-3 col-form-label">Endereço do site (URL):</label>
+                <div class="col-6 col-md-9">
+                    <input type="text" class="form-control" name="inputUrl" placeholder="Endereço do site (URL)">
+                </div>
+            </div>
+
+            <div class="mb-4 row">
+                <label for="inputHome" class="col-3 col-form-label">Endereço da página inícial (URL):</label>
+                <div class="col-6 col-md-9">
+                    <input type="text" class="form-control" name="inputHome"
+                        placeholder="Endereço da página inícial (URL)" aria-describedby="homeHelp">
+                    <div id="homeHelp" class="form-text">
+                        Digite o endereço aqui se deseja que a página inicial do seu site seja
+                        diferente do diretório de instalação.
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-4 row">
+                <label for="inputEmail" class="col-3 col-form-label">Email:</label>
+                <div class="col-5 col-md-9">
+                    <input type="email" class="form-control" name="inputEmail" placeholder="email@email.com"
+                        aria-describedby="emailHelp">
+                    <div id="emailHelp" class="form-text">
+                        Este endereço é utilizado para propósitos de administração. Se você mudá-lo, nós lhe enviaremos
+                        um
+                        e-mail em seu novo endereço para confirmá-lo. O novo endereço não será ativado enquanto não for
+                        confirmado.
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-4 row">
+                <label for="selectFuncUser" class="col-3 col-form-label">Função padrão para novo usuário:</label>
+                <div class="col-3 col-md-5">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Colaborador</option>
+                        <option value="1">Editor</option>
+                        <option value="2">Administrador</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="mb-4 row">
+                <label for="selectLanguage" class="col-3 col-form-label">Idioma do site:</label>
+                <div class="col-3 col-md-6">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Potuguês do Brasil</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="mb-4 row">
+                <label for="selecTimezone" class="col-3 col-form-label">Fuso horário:</label>
+                <div class="col-2 col-md-5">
+                    <select class="form-select" aria-label="Default select example" aria-describedby="timezoneHelp">
+                        <option selected>São Paulo</option>
+                    </select>
+                    <div id="timezoneHelp" class="form-text">
+                        Escolha uma cidade no mesmo fuso horário que você ou um deslocamento de tempo UTC (Tempo
+                        Universal
+                        Coordenado).
+                    </div>
+                    <span class="form-text">A hora universal é 07/09/2022 19:29:17. A hora local é 07/09/2022 16:29:17.
+                    </span>
+                </div>
+            </div>
+
+            <div class="mb-4 row">
+                <label for="selectDate" class="col-3 col-form-label">Formato de data:</label>
+                <div class="col-8">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="selectDate" checked>
+                        <label class="form-check-label" for="selectDate1">7 de setembro de 2022:</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="selectDate">
+                        <label class="form-check-label" for="selectDate2">2022-09-07:</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="selectDate">
+                        <label class="form-check-label" for="selectDate1">09/07/2022:</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="selectDate">
+                        <label class="form-check-label" for="selectDate2">07/09/2022:</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-4 row">
+                <label for="selectDay" class="col-3 col-form-label">Formato de hora:</label>
+                <div class="col-8">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="selectDay" checked>
+                        <label class="form-check-label" for="selectDay1">16:29:</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="selectDay">
+                        <label class="form-check-label" for="selectDay2">4:29 PM:</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-4 row">
+                <label for="selecStartWeek" class="col-3 col-form-label">Semana começa em:</label>
+                <div class="col-3 col-md-5">
+                    <select class="form-select" aria-label="Default select example" aria-describedby="timezoneHelp">
+                        <option selected>Domingo</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="mb-5 row">
+                <div class="offset-sm-1 col-sm-8">
+                    <button type="submit" class="btn btn-outline-primary">Salvar alterações</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

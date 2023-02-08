@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap');
+
+
+/************************* FONTS *****************************
+**************************************************************/
+$font-segundaria: 'Noto Sans JP', sans-serif;
+
+/************************* CORES *****************************
+**************************************************************/
+
+$bg-ligth: #fff;
+$cor-ligth: #8284e3;
+$cor-boder: #800080;
+$cor-font: #64646c;
+$bg-hover: #485264;
+$bg-dark: #212429;
+
+/************************* MIXINS *****************************
+**************************************************************/
+
+@mixin font-style($color, $weight) {
+    font-weight: $weight;
+    color: $color;
+}
+
+@mixin nav-svg($width, $height, $color) {
+    width: $width;
+    height: $height;
+    color: $color;
+    margin-right: 5px;
+}
+
+*,
+::after, 
+::before{
+    box-sizing: border-box;
+}
+
+html,
+body{
+    padding: 0;
+    margin: 0;
+}
+
+/************************* CONTAINER *****************************
+*****************************************************************/
+
+.container-fluid{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+}
+
+/************************* HEADER *****************************
+**************************************************************/
+header .navbar{    
+    flex: 1;
+    background: $bg-dark;
+    box-shadow: 0px 0px 8px 2px #00000046;
+}
+
+header .navbar path{
+    color: $cor-font;
+}
+
+header .navbar .navbar-logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 220px;
+    overflow: hidden;
+    transition: width .5s ease;
+}
+
+header .navbar .navbar-logo svg{
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+    margin: 0 18px 0 15px;
+}
+
+header .navbar .navbar-logo .navbar-title{
+    @include font-style($cor-font, bold);
+}
+
+header .navbar .navbar-search{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    padding: 0 20px;
+}
+
+header .navbar .navbar-search .button-toggle{
+    width: 28px;
+    height: 28px;
+    margin-right: 15px;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    &:hover path{        
+        color: $bg-ligth;
+    }
+}
+
+header .navbar .navbar-search input[type="search"]{
+    height: 100%;
+    width: 300px;
+    padding: 10px 0px;
+    font-size: 14px;
+    background: none;
+    border: none;
+    color: lighten($cor-font, 50%);
+    &:focus{
+       outline: none;
+    }
+    &::placeholder{
+        color: lighten($cor-font, 50%);
+    }
+}
+.container-fluid.nav-closed .sidebar .nav,
+.container-fluid.nav-closed header .navbar-logo {
+  width: 50px;
+}
+
+/************************ SIDEBAR ****************************
+**************************************************************/
+.sidebar{
+    display: flex;
+    flex: 1;        
+}
+
+.sidebar .nav{    
+    width: 180px;
+    min-width: 48px;
+    background: $bg-dark;
+    height: auto;
+    overflow: hidden;
+    transition: width .5s ease;
+    border-right: .5px solid $cor-boder;
+}
+
+.sidebar .nav .nav-item .nav-link{
+    font-family: $font-segundaria;
+    @include font-style($cor-font, 300);        
+    cursor: pointer;    
+    white-space: nowrap;
+    &:hover{
+        color: lighten($cor-font, 50%);
+        background: $bg-hover;
+    }    
+    &:hover path{
+        color: $cor-ligth;
+    }
+    &.active path{
+        color: $bg-ligth;
+    }
+    &.active{
+        color: $bg-ligth;
+    }
+}
+
+.sidebar .nav svg {
+    @include nav-svg(25px, 25px, $cor-font);
+}
+
+.sidebar .nav .active{
+    background: $cor-ligth;
+    color: $bg-ligth;
+}
+
+/************************* PAGE CONTENT ***********************
+**************************************************************/
+.page-content{
+    flex: 1;
+}
+
+/************************* FOOTER ***********************
+**************************************************************/
+footer{
+    background-color: darken($bg-dark, 3%);
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    height: 50px;
+}

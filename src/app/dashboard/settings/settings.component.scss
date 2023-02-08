@@ -1,0 +1,41 @@
+html, body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+/************************* CORES *****************************
+**************************************************************/
+$bg-dark: #212429;
+$bg-ligth: #fff;
+$bg-hover: #485264;
+$padrao-fonte: #64646c;
+$color-highligths: #8284e3;
+$preto: #000;
+/************************ MAIN CONTENT ************************
+*****************************************************************/
+.main-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: $bg-dark;
+}
+.heading-inline{
+    background: darken($bg-dark, 3%);
+    border: 2px dashed lighten($bg-dark, 2%);;
+    color: $bg-ligth;
+    padding: 20px 40px;
+    margin-block: 30px;
+    align-self: stretch;
+}
+.content-form{
+    margin-inline: 50px;
+    max-width: 1200px;
+}
+label{    
+    color: lighten($padrao-fonte, 50%);
+}
+

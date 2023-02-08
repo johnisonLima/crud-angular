@@ -1,0 +1,109 @@
+html, body{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+/************************* CORES *****************************
+**************************************************************/
+$bg-dark: #212429;
+$bg-ligth: #fff;
+$bg-hover: #485264;
+$padrao-fonte: #64646c;
+$color-highligths: #8284e3;
+$preto: #000;
+/************************* MIXINS *****************************
+**************************************************************/
+@mixin customize() {
+    padding-bottom: 30px;
+    margin-bottom: 40px;
+    margin-left: 40px;
+    border-bottom: 2px solid darken($padrao-fonte, 21%);
+}
+/************************* MAIN CONTENT ***************************
+******************************************************************/
+.main_content{
+    display: flex;
+    flex-direction: column;
+    background: darken($bg-dark, 2%);    
+    height: calc(100vh - 250px);
+    font-family: 'Roboto';
+}
+/****************** PUBLICH AND NOTICE ************************
+**************************************************************/
+.btn-publish{
+    margin: 40px;
+    margin-bottom: 0;
+}
+.heading-inline{
+    background: darken($bg-dark, 3%);
+    border: 2px dashed lighten($bg-dark, 2%);;
+    color: $bg-ligth;
+    padding: 20px 40px;
+    margin-block: 30px;
+}
+/*************************** FAVICON ***************************
+******************************************************************/
+.customize-favicon{
+    @include customize();
+}
+.customize-title{
+    margin-bottom: 20px;
+    color: $padrao-fonte;
+}
+.customize-favicon .customize-icon-preview{
+    margin-bottom: 20px;
+}
+.customize-favicon .favicon-preview{
+    float: left;
+    margin: 5px 10px 0 0;
+    overflow: hidden;
+    position: relative;
+    max-width: 180px;
+    background: rgb(241, 240, 240);
+}
+.customize-favicon .customize-icon-preview img{
+    max-width: 100%;
+}
+.customize-favicon .favicon-preview .browser-preview{
+   vertical-align: text-top;
+}
+.custom-favicon-title{
+    height: 19px;
+    overflow: hidden;
+    position: absolute;
+    top: 16px;
+}
+.customize-favicon .favicon-preview .favicon{
+    direction: ltr;
+    width: 19px;
+    height: 19px;
+    left: 87px;
+    @extend .custom-favicon-title;
+}
+.customize-favicon .favicon-preview .browser-title{
+    left: 109px;
+    width: 72px;
+    white-space: nowrap;    
+    font-size: 13px;
+    @extend .custom-favicon-title;
+}
+.customize-favicon .icon-favicon-preview{
+    border-radius: 16px;
+    width: 64px;
+    height: 64px;
+    background: $preto;
+    margin-top: 9px;
+}
+/*************************** LOGO *********************************
+******************************************************************/
+.customize-logo{
+    @include customize();
+}
+.edit-logo{
+    width: 280px;
+    display: block;
+    margin: 20px 0;
+}
