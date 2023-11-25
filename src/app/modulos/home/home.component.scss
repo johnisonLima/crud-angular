@@ -1,0 +1,103 @@
+@import '../../../styles.scss';
+
+/************************* CONTAINER *****************************
+*****************************************************************/
+
+.container-fluid{
+    display: flex;
+    flex-direction: column;
+}
+
+/************************* HEADER *****************************
+**************************************************************/
+header .navbar{    
+    flex: 1;
+    background: $background-color;
+    box-shadow: 0px 0px 8px 2px #00000046;
+}
+
+header .navbar .navbar-logo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 220px;
+    overflow: hidden;
+    transition: width .5s ease;
+}
+
+header .navbar .navbar-logo svg{
+    width: 32px;
+    height: 32px;
+    min-width: 32px;
+    min-height: 32px;
+    margin: 0 18px 0 15px;
+}
+
+header .navbar .navbar-logo .navbar-title{
+    color: $text-color;
+    font-weight: bold;
+}
+
+.container-fluid.nav-closed .sidebar .nav,
+.container-fluid.nav-closed header .navbar-logo {
+  width: 50px;
+}
+
+/************************ CONTENT ****************************
+**************************************************************/
+.content{
+    display: flex;
+    flex: 1;        
+}
+
+/************************ SIDEBAR ****************************
+**************************************************************/
+.sidebar{
+    display: flex;
+    flex: 1;        
+}
+
+.sidebar .nav{    
+    width: 180px;
+    min-width: 48px;
+    background: $background-color;
+    height: auto;
+    overflow: hidden;
+    transition: width .5s ease;
+    border-right: .5px solid $secondary-color;
+}
+
+.sidebar .nav .nav-item {
+    // white-space: nowrap;
+    cursor: pointer;
+    color: $text-color;
+    &:hover{
+        color: lighten($text-color, 50%);
+        background-color: lighten($background-color, 50%);
+    }
+    &:path,
+    &:active path,
+    &:active{
+        color: lighten($text-color, 50%);
+    }
+}
+
+.sidebar .nav .active{
+    background: lighten($background-color, 50%);
+    color: lighten($background-color, 50%);
+}
+
+/**************************** MAIN ***************************
+**************************************************************/
+.main{
+    flex: 1;
+}
+
+/************************* FOOTER ***********************
+**************************************************************/
+footer{
+    background-color: darken($background-color, 3%);
+    text-align: center;
+    color: #fff;
+    height: 50px;
+}
